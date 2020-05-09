@@ -1,0 +1,43 @@
+{
+  "name": "@sintexph/vue-lib",
+  "version": "1.7.2",
+  "description": "Sintext vue components",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sintexph/vue-lib.git"
+  },
+  "dependencies": {
+    "vue2-autocomplete-js": "*",
+    "@tinymce/tinymce-vue": "*",
+    "es6-promise": "*",
+    "object-assign": "*",
+    "icheck": "*",
+    "vue-inputmask": "*",
+    "vue-toast-notification": "*"
+  },
+  "main": "index.js",
+  "keywords": [
+    "sintex",
+    "vue"
+  ],
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/sintexph/vue-lib/issues"
+  },
+  "homepage": "https://github.com/sintexph/vue-lib#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sintexph",
+  "devDependencies": {
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.3"
+  }
+}
