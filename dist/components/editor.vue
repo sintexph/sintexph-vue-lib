@@ -44,33 +44,20 @@
                 init: {
                     force_br_newlines: true,
                     force_p_newlines: false,
-                    forced_root_block: '',// Needed for 3.x,
+                    forced_root_block: '', // Needed for 3.x,
                     oninit: "setPlainText",
                     branding: false,
                     entity_encoding: "raw",
                     toolbar: this.toolbar(),
                     plugins: this.plugins(),
                     font_formats: 'Arial=arial,helvetica,sans-serif;',
-                    content_style: `
-                    body,p,h3,h2,h1,h5 { font-family: Arial }
-                                            ol {
-                        counter-reset: item
-                        }
-
-                        ol li {
-                        display: block
-                        }
-
-                        ol li:before {
-                        content: counters(item, ".") ". ";
-                        counter-increment: item
-                        }
-
-                        ol[style*="list-style-type: lower-alpha;"] li:before {
-                        content: counters(item, ".", lower-alpha) ". ";
-                        counter-increment: item
-                        }
-                    `,
+                    content_style:'body,p,h3,h2,h1,h5 { font-family: Arial }'+
+                       'ol { counter-reset: item }'+
+                        'ol li { display: block }'+
+                        'ol li:before { content: counters(item, ".") ". "; counter-increment: item }'+
+                        'ol[style*="list-style-type: lower-alpha;"] li:before { content: counters(item, ".", lower-alpha) ". "; '+
+                        'counter-increment: item }'
+                    ,
                     paste_data_images: this.paste_image,
                     autoresize_min_height: this.min_height,
 
@@ -123,7 +110,7 @@
                 this.editor_value = val;
             }
         },
-        mounted() {
+        mounted: function () {
 
             this.editor_value = this.value;
             this.$nextTick(function () {
@@ -136,5 +123,4 @@
         }
 
     }
-
 </script>

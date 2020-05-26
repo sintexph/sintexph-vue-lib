@@ -27,7 +27,7 @@
                 }
             }
         },
-        mounted() {
+        mounted : function() {
             //this.tab = this.getAllUrlParams().tab;
         }
     }

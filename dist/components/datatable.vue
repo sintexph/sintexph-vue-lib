@@ -181,7 +181,7 @@
 
                     $('#request-table' + vm._uid + ' tbody').on('dblclick', 'tr', function () {
                         var data = vm.table.row(this).data();
-                        vm.$emit('rowDoubleClicked', data); 
+                        vm.$emit('rowDoubleClicked', data);
                     });
 
                 }
@@ -215,11 +215,18 @@
             if (this.dataOnLoad === true) {
                 this.initColumns();
                 this.$nextTick(function () {
-                    this.init();
+                    if (this.url)
+                        this.init();
                 });
             }
         },
-
+        watch: {
+            url(value) {
+                console.log(value);
+                if (value)
+                    this.init();
+            }
+        },
         computed: {
             table_class: function () {
 

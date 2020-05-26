@@ -36,7 +36,7 @@
         },
         computed: {
             type_alert: function () {
-                let class_type = '';
+                var class_type = '';
                 switch (this.type) {
                     case 'success':
                         class_type = 'alert-success';

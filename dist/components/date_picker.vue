@@ -33,7 +33,7 @@
                $(this.$el).datepicker('setDate',val);
 
             },
-            data_value(value) {
+            data_value:function(value) {
                 this.$emit('input', value);
             }
         },
@@ -42,7 +42,7 @@
                 data_value: '',
             }
         },
-        mounted() {
+        mounted: function () {
             var vm = this;
             $(this.$el).datepicker({
                 autoclose: true,
@@ -52,7 +52,7 @@
             });
 
         },
-        beforeDestroy() {
+        beforeDestroy:function() {
             $(this.$el).off('changeDate');
         }
     }

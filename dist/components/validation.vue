@@ -11,13 +11,13 @@
         props: {
             errors: {
                 required: true,
-                default () {
+                default: function () {
                     return []
                 }
             },
             field: {
                 required: true,
-                default () {
+                default: function () {
                     return '';
                 }
             },

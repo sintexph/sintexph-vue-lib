@@ -7,7 +7,7 @@ import 'vue-toast-notification/dist/theme-default.css';
 
 Vue.use(VueToast);
 
-const VueInputMask = require('vue-inputmask').default
+window.VueInputMask = require('vue-inputmask').default
 import toastHelper from './dist/mixin/toast_helper.js'
 import httpAlert from './dist/mixin/http_alert.js'
 import waitDialog from './dist/mixin/wait_dialog.js'

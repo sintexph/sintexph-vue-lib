@@ -9,7 +9,7 @@
                 id:'',
             }
         },
-        mounted() {
+        mounted : function() {
             this.id='pdfviewer'+this._uid;
             this.$nextTick(function () {
                 PDFObject.embed(this.src, "#"+this.id);

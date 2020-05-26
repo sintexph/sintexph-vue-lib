@@ -48,7 +48,7 @@
             }
         },
         computed: {
-            hasFooterSlot() {
+            hasFooterSlot: function() {
                 return !!this.$slots['footer']
             }
         },
@@ -67,7 +67,7 @@
                 $("#" + this.modal).modal('toggle');
             },
             raised_exit: function () {
-                let vm = this;
+                var vm = this;
                 $("#" + this.modal).on('hidden.bs.modal', function () {
                     vm.$emit('hidden');
                     // Check for overlaying modal, it will fix the unscrollable issue of overlaying modal
@@ -90,7 +90,7 @@
                 this.message = message;
             }
         },
-        mounted() {
+        mounted: function () {
             this.modal = this.name + this._uid;
             this.$nextTick(function () {
                 this.raised_exit();

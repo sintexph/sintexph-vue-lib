@@ -6,43 +6,39 @@
         props: {
             value: {
                 type: Boolean,
-                default () {
+                default: function () {
                     return false;
                 }
             },
             off_text: {
-                default () {
+                default: function () {
                     return 'Off';
                 }
             },
             on_text: {
-                default () {
+                default: function () {
                     return 'On';
                 }
             },
             on_style: {
-                default () {
+                default: function () {
                     return 'primary';
                 }
             },
-            on_style: {
-                default () {
-                    return 'default';
-                }
-            },
+            
             size: {
-                default () {
+                default: function () {
                     return 'normal';
                 }
             }
         },
-        data() {
+        data: function () {
             return {
                 toogle_id: '',
                 checked: false,
             }
         },
-        mounted() {
+        mounted : function() {
 
             var vm = this;
             vm.toogle_id = 'toogle' + vm._uid;
@@ -73,7 +69,7 @@
             }
         },
         computed: {
-            data_width() {
+            data_width: function ()  {
                 var length = this.off_text.length + this.on_text.length;
                 return length * 7;
             }

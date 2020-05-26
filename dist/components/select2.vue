@@ -8,7 +8,7 @@
         props: {
             options: {
                 type: [Object, Array],
-                default () {
+                default: function () {
                     return null;
                 }
             },
@@ -16,13 +16,13 @@
             style_name: String,
             value: {
                 type: [Object, Array, String, Number],
-                default () {
+                default: function () {
                     return null;
                 }
             },
             url: {
                 type: [String],
-                default () {
+                default: function () {
                     return null;
                 }
             },
@@ -30,7 +30,7 @@
             placeholder: String,
             disabled: Boolean,
         },
-        data() {
+        data: function () {
             return {
                 select_value: null,
             }
@@ -89,7 +89,7 @@
             },
             select_value: {
                 deep: true,
-                handler(value) {
+                handler: function(value) {
                     this.$emit('input', value);
                     this.$emit('changed');
                 }
