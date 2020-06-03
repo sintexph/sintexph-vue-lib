@@ -7,7 +7,7 @@
                         <template v-if="cols.type==='checkbox'">
                             <input type="checkbox" class="data-table-checkall">
                         </template>
-                        <span v-else v-text="(cols.label).toUpperCase()"></span>
+                        <span v-else v-html="cols.label"></span>
                     </th>
                 </tr>
             </thead>
